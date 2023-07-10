@@ -1,4 +1,7 @@
-import { Rocket, X, Check } from 'lucide-react'
+'use client'
+
+import { ArrowRight, Check, Rocket, X } from 'lucide-react'
+import { Notification } from './Notification'
 
 export function Widget() {
   return (
@@ -18,39 +21,28 @@ export function Widget() {
         </div>
 
         <div className="divide-y-2 divide-zinc-300 dark:divide-zinc-950">
-          <div className="flex items-start gap-6 bg-zinc-200 px-8 py-4 dark:bg-zinc-900">
-            <Rocket className="mt-3 h-6 w-6 text-violet-500" />
-            <div className="flex flex-1 flex-col gap-2">
-              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-200">
-                Você recebeu um convite para fazer parte da empresa Rocketseat.
-              </p>
-              <div className="flex items-center gap-1 text-xxs text-zinc-500 dark:text-zinc-400">
-                <span>Convite</span>
-                <span>Há 3 min</span>
-              </div>
-            </div>
-          </div>
+          <Notification.Root>
+            <Notification.Icon icon={Rocket} />
+            <Notification.Content text="Você recebeu um convite para fazer parte da empresa Rocketseat." />
+            <Notification.Actions>
+              <Notification.Action onClick={() => {}} icon={X} />
+              <Notification.Action
+                icon={Check}
+                className="bg-violet-500 hover:bg-violet-600 dark:bg-violet-500 dark:hover:bg-violet-600"
+              />
+            </Notification.Actions>
+          </Notification.Root>
 
-          <div className="flex items-start gap-6 bg-zinc-200 px-8 py-4 dark:bg-zinc-900">
-            <Rocket className="mt-3 h-6 w-6 text-violet-500" />
-            <div className="flex flex-1 flex-col gap-2">
-              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-200">
-                Você recebeu um convite para fazer parte da empresa Rocketseat.
-              </p>
-              <div className="flex items-center gap-1 text-xxs text-zinc-400">
-                <span>Convite</span>
-                <span>Há 3 min</span>
-              </div>
-            </div>
-            <div className="flex gap-2 self-center">
-              <button className="flex h-8 w-8 items-center justify-center rounded bg-zinc-400 hover:bg-zinc-500 dark:bg-zinc-800 dark:hover:bg-zinc-700">
-                <X className="h-4 w-4 text-zinc-50" />
-              </button>
-              <button className="flex h-8 w-8 items-center justify-center rounded bg-violet-500 hover:bg-violet-600">
-                <Check className="h-4 w-4 text-zinc-50" />
-              </button>
-            </div>
-          </div>
+          <Notification.Root>
+            <Notification.Icon icon={Rocket} />
+            <Notification.Content text="Você recebeu um convite para fazer parte da empresa Rocketseat." />
+            <Notification.Actions>
+              <Notification.Action
+                icon={ArrowRight}
+                className="bg-emerald-500 hover:bg-emerald-600 dark:bg-emerald-500 dark:hover:bg-emerald-600"
+              />
+            </Notification.Actions>
+          </Notification.Root>
         </div>
       </div>
 
@@ -61,39 +53,15 @@ export function Widget() {
         </div>
 
         <div className="divide-y-2 divide-zinc-300 dark:divide-zinc-950">
-          <div className="flex items-start gap-6 bg-zinc-200 px-8 py-4 dark:bg-zinc-900">
-            <Rocket className="mt-3 h-6 w-6 text-violet-500" />
-            <div className="flex flex-1 flex-col gap-2">
-              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-200">
-                Você recebeu um convite para fazer parte da empresa Rocketseat.
-              </p>
-              <div className="flex items-center gap-1 text-xxs text-zinc-500 dark:text-zinc-400">
-                <span>Convite</span>
-                <span>Há 3 min</span>
-              </div>
-            </div>
-          </div>
+          <Notification.Root>
+            <Notification.Icon icon={Rocket} />
+            <Notification.Content text="Você recebeu um convite para fazer parte da empresa Rocketseat." />
+          </Notification.Root>
 
-          <div className="flex items-start gap-6 bg-zinc-200 px-8 py-4 dark:bg-zinc-900">
-            <Rocket className="mt-3 h-6 w-6 text-violet-500" />
-            <div className="flex flex-1 flex-col gap-2">
-              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-200">
-                Você recebeu um convite para fazer parte da empresa Rocketseat.
-              </p>
-              <div className="flex items-center gap-1 text-xxs text-zinc-400">
-                <span>Convite</span>
-                <span>Há 3 min</span>
-              </div>
-            </div>
-            <div className="flex gap-2 self-center">
-              <button className="flex h-8 w-8 items-center justify-center rounded bg-zinc-400 hover:bg-zinc-500 dark:bg-zinc-800 dark:hover:bg-zinc-700">
-                <X className="h-4 w-4 text-zinc-50" />
-              </button>
-              <button className="flex h-8 w-8 items-center justify-center rounded bg-violet-500 hover:bg-violet-600">
-                <Check className="h-4 w-4 text-zinc-50" />
-              </button>
-            </div>
-          </div>
+          <Notification.Root>
+            <Notification.Icon icon={Rocket} />
+            <Notification.Content text="Você recebeu um convite para fazer parte da empresa Rocketseat." />
+          </Notification.Root>
         </div>
       </div>
     </div>
